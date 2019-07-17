@@ -2,7 +2,6 @@
   "name": "ionic-mobile-book-reader",
   "version": "0.0.1",
   "author": "joseph adebajo",
-  "homepage": "",
   "private": true,
   "scripts": {
     "clean": "ionic-app-scripts clean",
