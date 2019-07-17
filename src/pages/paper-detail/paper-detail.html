@@ -1,0 +1,42 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <button ion-button float-right clear (click)="viewOriginalDocument()">
+      <ion-icon color="light" name="md-document"></ion-icon>
+    </button>
+    
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <!-- error message -->
+  <ion-card *ngIf="error_msg">
+    <ion-card-header>
+      Sorry!
+    </ion-card-header>
+  
+    <ion-card-content>
+      {{ error_msg }}
+    </ion-card-content>   
+  </ion-card>
+  
+  <div class="paper-content selectable" [ngClass]="{'font-one-point-zero': font_size === 10,
+  'font-one-point-one': font_size === 11,
+  'font-one-point-two': font_size === 12,
+  'font-one-point-three': font_size === 13,
+  'font-one-point-four': font_size === 14,
+  'font-one-point-five': font_size === 15,
+  'font-one-point-six': font_size === 16,
+  'font-one-point-seven': font_size === 17,
+  'font-one-point-eight': font_size === 18,
+  'font-one-point-nine': font_size === 19,
+  'font-two-point-zero': font_size === 20,
+  'background-black': background_choice == 'black',
+  'background-white': background_choice == 'white',
+  'background-light-yellow': background_choice == 'light-yellow'}">
+    {{ paper_text }}
+  </div>
+
+</ion-content>

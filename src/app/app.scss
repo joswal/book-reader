@@ -1,0 +1,99 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+
+[menuToggle] {
+    color: map-get($colors, background-dark);
+}
+
+.selectable, input, textarea {
+    -webkit-user-select: auto !important;
+    -khtml-user-select: auto !important;
+    -moz-user-select: all !important;
+    -ms-user-select: auto !important;
+    -o-user-select: auto !important;
+    user-select: auto !important;  
+}
+
+.input-cover {
+    display: none;
+}
+
+.font-one-point-zero {
+    font-size: 1.0em;
+}
+
+.font-one-point-one {
+    font-size: 1.1em;
+}
+
+.font-one-point-two {
+    font-size: 1.2em;
+}
+
+.font-one-point-three {
+    font-size: 1.3em;
+}
+
+.font-one-point-four {
+    font-size: 1.4em;
+}
+
+.font-one-point-five {
+    font-size: 1.5em;
+}
+
+.font-one-point-six {
+    font-size: 1.6em;
+}
+
+.font-one-point-seven {
+    font-size: 1.7em;
+}
+
+.font-one-point-eight {
+    font-size: 1.8em;
+}
+
+.font-one-point-nine {
+    font-size: 1.9em;
+}
+
+.font-two-point-zero {
+    font-size: 2.0em;
+}
+
+.background-white {
+    background-color: white;
+    color: black;
+}
+
+.background-black {
+    background-color: map-get($colors, background-dark);
+    color: rgba(204, 204, 202, 1);
+}
+
+.background-light-yellow {
+    background-color: map-get($colors, light-yellow);
+    color: rgba(8, 8, 8, 1);
+}
+
+.active-bg-choice {
+    box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    border: 2px solid map-get($colors, cmu-red);
+}
+

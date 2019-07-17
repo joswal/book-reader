@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <!-- <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button> -->
+    <ion-title>About</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <h4>Updates:</h4>
+  <ul>
+    <li>
+      Jan 21, 2018: Added support for viewing the original pdf document!
+    </li>
+    <li>
+      Jan 5, 2018: Added support for deleting individual document.
+    </li>
+    <li>
+      Dec 19, 2017: Refactor code for better performance and UX when loading reading history. (Using <em>Rx.ReplaySubject</em>)
+    </li>
+    <li>
+      Dec 8, 2017: Add <em>Paste from clipboard</em> support.
+    </li>
+    <li>
+      Nov 21, 2017: Updated the app to be tab-based. Added a History tab. Supports clear history. Display possible paper title instead of raw url in history for better identification.
+    </li>
+    <li>
+      Sept 30, 2017: Now you are able to view recently visited documents without web requests.
+    </li>
+    <li>
+      Sept 18, 2017: App released!
+    </li>
+  </ul>
+  <hr>
+  <p>Version {{ app_version }}</p><br>
+  <p>
+    Powered by <a (click)="openInAppBrowser('https://indico.io')">indico.io</a>.
+  </p>
+
+  <p>
+    Developed with the <a (click)="openInAppBrowser('https://ionicframework.com')">Ionic Framework</a>. It's available both for <strong>iOS</strong> and <strong>Android</strong>.
+  </p>
+
+  <p>
+    Created by <a (click)="openInAppBrowser('https://lxieyang.github.io')"><strong>Xieyang (Michael) Liu</strong></a> @ Carnegie Mellon University.
+  </p>
+
+</ion-content>
