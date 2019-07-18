@@ -9,37 +9,28 @@
 
 <ion-content>
 
-  <ion-card *ngIf="api_key != null && api_key == ''">
-    <ion-card-header color="cmu-red">
-      <h1>First time user? <br> Forget to set the API key?</h1>
-    </ion-card-header>
-      
-    <ion-card-content>
-      You need an <strong>indico</strong> API to use this app! Here's a tutorial on how to obtain an API key as a new user: <br>
-      <ion-icon name="link"></ion-icon>&nbsp;<strong (click)="goToTutorialPage()">How to Get an API Key?</strong> <br><br>
-      Make sure you come back to the home page to start reading! Have fun! 
-    </ion-card-content>
-  </ion-card>
-
   <ion-card *ngIf="platform != null && platform == 'android' && cleverdox_status != null && cleverdox_status == false">
-      <ion-card-header color="cmu-red">
-        <h1>Android User?</h1>
-      </ion-card-header>
-        
-      <ion-card-content>
-        Please head over to your app store and install <strong><a href="market://details?id=de.sitewaerts.cleverdox.viewer" (click)="setCleverdoxStatus(true)">cleverdox Viewer</a></strong>. Then you'll be able to view original pdf documents.
-      </ion-card-content>
-    
-    </ion-card>
+    <ion-card-header color="cmu-red">
+      <h1>Android User?</h1>
+    </ion-card-header>
+
+    <ion-card-content>
+      Please head over to your app store and install <strong><a
+          href="market://details?id=de.sitewaerts.cleverdox.viewer" (click)="setCleverdoxStatus(true)">cleverdox
+          Viewer</a></strong>. Then you'll be able to view original pdf documents.
+    </ion-card-content>
+
+  </ion-card>
 
   <ion-card padding *ngIf="api_key != null && api_key == ''">
     <h1>Enter paper link</h1>
     <p>Please input the url of the paper you want to read:</p>
-      
+
     <ion-item>
-      <ion-textarea autoresize="150" type="text" [(ngModel)]="paper_url" class="selectable" placeholder="Paper (PDF) URL"></ion-textarea>
+      <ion-textarea autoresize="150" type="text" [(ngModel)]="paper_url" class="selectable"
+        placeholder="Paper (PDF) URL"></ion-textarea>
     </ion-item>
-    
+
 
     <br><br>
 
@@ -47,7 +38,7 @@
       <ion-row>
         <ion-col col-6>
           <button ion-button block (click)="pasteFromClipboard()" small color="secondary">
-            <ion-icon name="clipboard"></ion-icon>&nbsp; Paste 
+            <ion-icon name="clipboard"></ion-icon>&nbsp; Paste
           </button>
         </ion-col>
         <ion-col col-6>
@@ -65,15 +56,16 @@
       </ion-row>
     </ion-grid>
   </ion-card>
-  
+
   <ion-card padding *ngIf="api_key != null && api_key != ''">
     <h1>Enter paper link</h1>
     <p>Please input the url of the paper you want to read:</p>
-      
+
     <ion-item>
-      <ion-textarea autoresize="150" type="text" [(ngModel)]="paper_url" class="selectable" placeholder="Paper (PDF) URL"></ion-textarea>
+      <ion-textarea autoresize="150" type="text" [(ngModel)]="paper_url" class="selectable"
+        placeholder="Paper (PDF) URL"></ion-textarea>
     </ion-item>
-    
+
 
     <br><br>
 
@@ -81,7 +73,7 @@
       <ion-row>
         <ion-col col-6>
           <button ion-button block (click)="pasteFromClipboard()" small color="secondary">
-            <ion-icon name="clipboard"></ion-icon>&nbsp; Paste 
+            <ion-icon name="clipboard"></ion-icon>&nbsp; Paste
           </button>
         </ion-col>
         <ion-col col-6>
@@ -103,7 +95,8 @@
   <div padding *ngIf="api_key != null && api_key != ''">
     <h1>Recent:</h1>
     <ion-list>
-      <ion-item-sliding *ngFor="let url of urls; let i = index" [ngClass]="{'dont-display': i >= recent_count}" #slidingItem>
+      <ion-item-sliding *ngFor="let url of urls; let i = index" [ngClass]="{'dont-display': i >= recent_count}"
+        #slidingItem>
         <ion-item text-wrap (click)="selectPaperUrl(url.url);">
           {{ url.title }}
         </ion-item>
@@ -113,5 +106,5 @@
       </ion-item-sliding>
     </ion-list>
   </div>
-  
+
 </ion-content>

@@ -10,48 +10,35 @@
 
 <ion-content>
 
-  <ion-list no-lines>
-    <ion-list-header>
-      <ion-icon name="md-key"></ion-icon> &nbsp;
-      API Key
-    </ion-list-header>
-    <div padding>
-      <ion-input type="text" [(ngModel)]="api_key" class="selectable" placeholder="API Key for indico"></ion-input>
-      <button ion-button secondary block (click)="setApiKey()">Set API Key</button>
-
-      <button ion-button secondary block (click)="removeApiKey()" color="danger" outline>Remove API Key</button>
-      <br>
-      <p style="color:#666;">
-        <ion-icon name="link"></ion-icon>&nbsp;
-        You can get your API key at: <a (click)="openInAppBrowser('https://indico.io/dashboard/')">https://indico.io/dashboard/</a>
-      </p>
-      <p style="color:#666;">
-        <ion-icon name="link"></ion-icon>&nbsp;
-        Tutorial on how to obtain an API key as a new user: <strong (click)="goToTutorialPage()">How to Get an API Key?</strong>
-      </p>
-    </div>
-  </ion-list>
 
   <ion-list no-lines>
     <ion-list-header>
-        <ion-icon name="book"></ion-icon> &nbsp;
-        Reading
+      <ion-icon name="book"></ion-icon> &nbsp;
+      Reading
     </ion-list-header>
     <ion-item>
       <span style="float: left; font-size: 1.1em; padding: 10px 0 0 0">Background</span>
       <span style="float: right;">
-        <button ion-button color="light-yellow" (click)="changeBackgroundTo('light-yellow')" style="font-size: 1.0em; padding: 15px 15px;" round [ngClass]="{'active-bg-choice' : background_choice == 'light-yellow'}">B</button>
-        <button ion-button outline color="dark" (click)="changeBackgroundTo('white')" style="font-size: 1.0em; padding: 15px 15px;" round [ngClass]="{'active-bg-choice' : background_choice == 'white'}">B</button>
-        <button ion-button color="dark" (click)="changeBackgroundTo('black')" style="font-size: 1.0em; padding: 15px 15px;" round [ngClass]="{'active-bg-choice' : background_choice == 'black'}">B</button>
+        <button ion-button color="light-yellow" (click)="changeBackgroundTo('light-yellow')"
+          style="font-size: 1.0em; padding: 15px 15px;" round
+          [ngClass]="{'active-bg-choice' : background_choice == 'light-yellow'}">B</button>
+        <button ion-button outline color="dark" (click)="changeBackgroundTo('white')"
+          style="font-size: 1.0em; padding: 15px 15px;" round
+          [ngClass]="{'active-bg-choice' : background_choice == 'white'}">B</button>
+        <button ion-button color="dark" (click)="changeBackgroundTo('black')"
+          style="font-size: 1.0em; padding: 15px 15px;" round
+          [ngClass]="{'active-bg-choice' : background_choice == 'black'}">B</button>
       </span>
     </ion-item>
     <ion-item>
       <span style="float: left; font-size: 1.1em; padding: 10px 0 0 0">Font size</span>
-      <span style="border-radius: 5px; background-color: lightgrey; padding: 5px 5px;; float: right;">{{ font_size }}</span>
+      <span
+        style="border-radius: 5px; background-color: lightgrey; padding: 5px 5px;; float: right;">{{ font_size }}</span>
     </ion-item>
     <ion-item>
       <div style="float: left; font-size: 1.2em; padding: 10px 0 0 0">Font size</div><br>
-      <ion-range min="10" max="20" step="1" snaps="true" pin="true" color="dark" [(ngModel)]="font_size" (ionChange)="setFontSize()">
+      <ion-range min="10" max="20" step="1" snaps="true" pin="true" color="dark" [(ngModel)]="font_size"
+        (ionChange)="setFontSize()">
         <ion-label range-left>10</ion-label>
         <ion-label range-right>20</ion-label>
       </ion-range>
@@ -60,10 +47,10 @@
 
   <ion-list no-lines>
     <ion-list-header>
-        <ion-icon name="md-checkmark"></ion-icon> &nbsp;
-        Misc
+      <ion-icon name="md-checkmark"></ion-icon> &nbsp;
+      Misc
     </ion-list-header>
-    <button ion-item (click)="clearHistory()" >
+    <button ion-item (click)="clearHistory()">
       Clear History
     </button>
     <button ion-item (click)="goToAboutPage()">
@@ -74,9 +61,9 @@
   <div padding>
     <p>Version {{ app_version }}</p>
     <p>
-      Created by <a (click)="openInAppBrowser('https://lxieyang.github.io')"><strong>@lxieyang</strong></a>
+      Created by <a (click)="openInAppBrowser('https://joswal.github.io')"><strong>@joswal</strong></a>
     </p>
   </div>
-  
+
 
 </ion-content>

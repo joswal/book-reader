@@ -52,7 +52,6 @@ import { UserDataProvider } from '../providers/user-data/user-data';
     PaperDetailPage,
     SettingsPage,
     AboutPage,
-    GetApiTutorialPage,
     TabsPage,
     HistoryPage
   ],
